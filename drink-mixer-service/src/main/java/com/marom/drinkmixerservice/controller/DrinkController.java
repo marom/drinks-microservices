@@ -26,11 +26,12 @@ public class DrinkController {
         Spirits spirits = restTemplate.getForObject("http://localhost:8081/spirits/api/all", Spirits.class);
         Ingredients ingredients = restTemplate.getForObject("http://localhost:8082/ingredients/api/all", Ingredients.class);
 
-        Random randomSpirit = new Random();
-        int x =  randomSpirit.nextInt((spirits.getSpirits().size() - 0) + 1) + 0;
+        Random random = new Random();
+        String randomSpirit =  spirits.getSpirits().get(random.nextInt(spirits.getSpirits().size())).getName();
+        String randomNonSpirit =  ingredients.getIngredients().get(random.nextInt(ingredients.getIngredients().size())).getName();
 
 
-        return new Drink("sssss", "dfsdafdafa");
+        return new Drink(randomSpirit, randomNonSpirit);
 
     }
 }

@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="spirit-service" />
+        <module name="drink-mixer-service" />
         <module name="ingedient-service" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="base-spirit-service" target="1.8" />
+      <module name="drink-mixer-service" target="1.8" />
       <module name="ingedient-service" target="1.8" />
       <module name="ingredients-service" target="1.8" />
       <module name="spirit-service" target="1.8" />
@@ -20,6 +22,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="base-spirit-service" options="-parameters" />
+      <module name="drink-mixer-service" options="-parameters" />
       <module name="ingedient-service" options="-parameters" />
       <module name="ingredients-service" options="-parameters" />
       <module name="spirit-service" options="-parameters" />

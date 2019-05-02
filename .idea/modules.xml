@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/drink-mixer-service/drink-mixer-service.iml" filepath="$PROJECT_DIR$/drink-mixer-service/drink-mixer-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/drinks-microservices.iml" filepath="$PROJECT_DIR$/drinks-microservices.iml" />
       <module fileurl="file://$PROJECT_DIR$/ingedient-service/ingedient-service.iml" filepath="$PROJECT_DIR$/ingedient-service/ingedient-service.iml" />
       <module fileurl="file://$PROJECT_DIR$/spirit-service/spirit-service.iml" filepath="$PROJECT_DIR$/spirit-service/spirit-service.iml" />

@@ -6,6 +6,7 @@
         <option value="$PROJECT_DIR$/base-spirit/pom.xml" />
         <option value="$PROJECT_DIR$/ingredients-microservices/pom.xml" />
         <option value="$PROJECT_DIR$/spirit-service/pom.xml" />
+        <option value="$PROJECT_DIR$/ingedient-service/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

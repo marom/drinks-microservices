@@ -14,7 +14,7 @@ import java.util.Random;
 @RequestMapping("/mixer")
 public class DrinkController {
 
-    private RestTemplate restTemplate;
+     private RestTemplate restTemplate;
 
     public DrinkController(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
@@ -23,8 +23,8 @@ public class DrinkController {
     @GetMapping
     public Drink mixMyDrink() {
 
-        Spirits spirits = restTemplate.getForObject("http://localhost:8081/spirits/api/all", Spirits.class);
-        Ingredients ingredients = restTemplate.getForObject("http://localhost:8082/ingredients/api/all", Ingredients.class);
+        Spirits spirits = restTemplate.getForObject("http://spirit-service/spirits/api/all", Spirits.class);
+        Ingredients ingredients = restTemplate.getForObject("http://ingredient-service/ingredients/api/all", Ingredients.class);
 
         Random random = new Random();
         String randomSpirit =  spirits.getSpirits().get(random.nextInt(spirits.getSpirits().size())).getName();

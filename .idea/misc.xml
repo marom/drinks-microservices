@@ -5,7 +5,14 @@
       <list>
         <option value="$PROJECT_DIR$/base-spirit/pom.xml" />
         <option value="$PROJECT_DIR$/ingredients-microservices/pom.xml" />
+        <option value="$PROJECT_DIR$/spirit-service/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/base-spirit-service/pom.xml" />
+        <option value="$PROJECT_DIR$/ingredients-service/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">

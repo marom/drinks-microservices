@@ -3,5 +3,6 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/base-spirit-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ingredients-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/spirit-service" charset="UTF-8" />
   </component>
 </project>

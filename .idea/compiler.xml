@@ -9,6 +9,7 @@
         <module name="spirit-service" />
         <module name="drink-mixer-service" />
         <module name="ingedient-service" />
+        <module name="zuulproxy" />
         <module name="discovery-server" />
       </profile>
     </annotationProcessing>
@@ -19,6 +20,7 @@
       <module name="ingedient-service" target="1.8" />
       <module name="ingredients-service" target="1.8" />
       <module name="spirit-service" target="1.8" />
+      <module name="zuulproxy" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -29,6 +31,7 @@
       <module name="ingedient-service" options="-parameters" />
       <module name="ingredients-service" options="-parameters" />
       <module name="spirit-service" options="-parameters" />
+      <module name="zuulproxy" options="-parameters" />
     </option>
   </component>
 </project>

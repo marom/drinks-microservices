@@ -2,14 +2,14 @@ package com.marom.zuulproxy.controller;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Primary;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Controller;
 import springfox.documentation.swagger.web.SwaggerResource;
 import springfox.documentation.swagger.web.SwaggerResourcesProvider;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Component
+@Controller
 @Primary
 @EnableAutoConfiguration
 public class DocumentationController implements SwaggerResourcesProvider {
@@ -18,7 +18,7 @@ public class DocumentationController implements SwaggerResourcesProvider {
     @Override
     public List<SwaggerResource> get() {
         List<SwaggerResource> resources = new ArrayList<>();
-        resources.add(swaggerResource("drinks-service", "/api/mixer/v2/api-docs", "2.0"));
+        resources.add(swaggerResource("drinks-service", "/v2/api-docs", "2.0"));
         return resources;
     }
 

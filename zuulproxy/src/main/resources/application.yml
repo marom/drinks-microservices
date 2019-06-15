@@ -1,0 +1,12 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: zuul
+zuul:
+  routes:
+    drinks-service:
+      path: /mixer
+      service-id: drinks-service
+      strip-prefix: false

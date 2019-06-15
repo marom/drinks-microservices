@@ -1,25 +1,26 @@
 package com.marom.drinkmixerservice.domain;
 
+import java.util.List;
+
 public class Drink {
 
     private String spiritBase;
-    private String nonSpiritIngredient;
+    private List<String> nonSpiritIngredients;
 
-    public Drink() {
-    }
 
-    public Drink(String spiritBase, String nonSpiritIngredient) {
+
+    public Drink(String spiritBase, List<String> nonSpiritIngredients) {
         this.spiritBase = spiritBase;
-        this.nonSpiritIngredient = nonSpiritIngredient;
+        this.nonSpiritIngredients = nonSpiritIngredients;
     }
 
 
-    public String getNonSpiritIngredient() {
-        return nonSpiritIngredient;
+    public List<String> getNonSpiritIngredients() {
+        return nonSpiritIngredients;
     }
 
-    public void setNonSpiritIngredient(String nonSpiritIngredient) {
-        this.nonSpiritIngredient = nonSpiritIngredient;
+    public void setNonSpiritIngredients(List<String> nonSpiritIngredients) {
+        this.nonSpiritIngredients = nonSpiritIngredients;
     }
 
     public String getSpiritBase() {

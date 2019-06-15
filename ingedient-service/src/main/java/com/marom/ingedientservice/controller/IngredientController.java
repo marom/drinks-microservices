@@ -12,7 +12,19 @@ import java.util.Arrays;
 @RestController
 public class IngredientController {
 
-    Ingredients ingredients = new Ingredients(Arrays.asList(new Ingredient("Orange juice"), new Ingredient("Lemon juice")));
+    Ingredients ingredients = new Ingredients(Arrays.asList(
+            new Ingredient("Orange juice"),
+            new Ingredient("Lemon juice"),
+            new Ingredient("2 large limes"),
+            new Ingredient("7 strawberries"),
+            new Ingredient("8 cups ice cubes"),
+            new Ingredient("4 cups diced rhubarb"),
+            new Ingredient("Soda water"),
+            new Ingredient("Pineapple juice"),
+            new Ingredient("Honey syrup"),
+            new Ingredient("Coffee ice cream"),
+            new Ingredient("Cold-brew coffee")
+    ));
 
     @GetMapping("/all")
     public Ingredients getAllIngredients() {

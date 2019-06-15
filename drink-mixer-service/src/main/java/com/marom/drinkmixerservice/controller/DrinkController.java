@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 @RestController
@@ -29,9 +31,12 @@ public class DrinkController {
         Random random = new Random();
         String randomSpirit =  spirits.getSpirits().get(random.nextInt(spirits.getSpirits().size())).getName();
         String randomNonSpirit =  ingredients.getIngredients().get(random.nextInt(ingredients.getIngredients().size())).getName();
+        String secondNonSpirit =  ingredients.getIngredients().get(random.nextInt(ingredients.getIngredients().size())).getName();
+        String thirdNonSpirit =  ingredients.getIngredients().get(random.nextInt(ingredients.getIngredients().size())).getName();
 
+        List<String> nonSpiritIngredients = Arrays.asList(randomNonSpirit, secondNonSpirit, thirdNonSpirit);
 
-        return new Drink(randomSpirit, randomNonSpirit);
+        return new Drink(randomSpirit, nonSpiritIngredients);
 
     }
 }

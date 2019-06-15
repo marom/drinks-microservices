@@ -7,6 +7,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletResponse;
+import java.util.UUID;
+
+import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.POST_TYPE;
 
 @Slf4j
 @Component
@@ -14,7 +17,7 @@ public class ZuulPostFilter extends ZuulFilter {
 
     @Override
     public String filterType() {
-        return "post";
+        return POST_TYPE;
     }
 
     @Override
@@ -33,7 +36,10 @@ public class ZuulPostFilter extends ZuulFilter {
         RequestContext ctx = RequestContext.getCurrentContext();
         HttpServletResponse response = ctx.getResponse();
 
-        log.info(String.format("POST-FILTER %s response status and content type %s", response.getStatus(), response.getContentType()));
+        // add another header
+        response.addHeader("X-Sample", UUID.randomUUID().toString());
+
+        log.info(String.format("POST-FILTER %s response status and header: %s", response.getStatus(), response.getHeader("DrinkHeader")));
         return null;
     }
 }

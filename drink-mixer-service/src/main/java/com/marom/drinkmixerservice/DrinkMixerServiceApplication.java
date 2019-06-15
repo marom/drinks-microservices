@@ -37,14 +37,12 @@ public class DrinkMixerServiceApplication {
 
     @Bean
     public Docket api() throws IOException, XmlPullParserException {
-        MavenXpp3Reader reader = new MavenXpp3Reader();
-        Model model = reader.read(new FileReader("pom.xml"));
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("com.marom.drinkmixerservice.controller"))
                 .paths(PathSelectors.any())
                 .build().apiInfo(new ApiInfo("Drink Mixer Service Api Documentation", "Documentation automatically generated",
-                        model.getParent().getVersion(),
+                        "v.1.0",
                         null,
                         new Contact("MaroM", "webpage.com", "marom@mail.com"), null, null));
     }

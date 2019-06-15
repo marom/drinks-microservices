@@ -5,9 +5,11 @@ import com.marom.drinkmixerservice.domain.Ingredients;
 import com.marom.drinkmixerservice.domain.Spirits;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.servlet.http.HttpServletResponse;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -23,7 +25,10 @@ public class DrinkController {
     }
 
     @GetMapping
-    public Drink mixMyDrink() {
+    @ResponseBody
+    public Drink mixMyDrink(HttpServletResponse response) {
+
+        response.addHeader("DrinkHeader", "some text");
 
         Spirits spirits = restTemplate.getForObject("http://spirit-service/spirits/api/all", Spirits.class);
         Ingredients ingredients = restTemplate.getForObject("http://ingredient-service/ingredients/api/all", Ingredients.class);

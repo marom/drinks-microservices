@@ -12,7 +12,16 @@ import java.util.Arrays;
 @RequestMapping("/spirits/api")
 public class SpiritController {
 
-    Spirits spirits = new Spirits(Arrays.asList(new Spirit("Vodka"), new Spirit("Gin")));
+    Spirits spirits = new Spirits(Arrays.asList(
+            new Spirit("Vodka"),
+            new Spirit("Gin"),
+            new Spirit("Tequila"),
+            new Spirit("Ginger beer"),
+            new Spirit("Red wine"),
+            new Spirit("Brandy"),
+            new Spirit("Bourbon"),
+            new Spirit("Tequila")
+            ));
 
     @GetMapping("/all")
     public Spirits getAllSpirits() {
